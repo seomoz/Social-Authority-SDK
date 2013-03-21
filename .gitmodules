@@ -1,0 +1,3 @@
+[submodule "client-libraries/p5-Webservice-Followerwonk-SocialAuthority"]
+	path = client-libraries/p5-Webservice-Followerwonk-SocialAuthority
+	url = git@github.com:seomoz/p5-Webservice-Followerwonk-SocialAuthority.git
