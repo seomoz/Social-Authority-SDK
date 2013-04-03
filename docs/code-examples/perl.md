@@ -13,7 +13,7 @@ Querying the Social Authority API is really quite simple. Here's an expanded exa
 	use Getopt::Long;
 	use Digest::HMAC_SHA1 qw(hmac_sha1_hex);
 
-	my $uri = 'http://api.followerwonk.com/social-authority/';
+	my $uri = 'https://api.followerwonk.com/social-authority/';
 
 	GetOptions(
 	    'uri=s' => \$uri,
