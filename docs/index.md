@@ -1,5 +1,6 @@
 ---
 title: The Social Authority SDK
+layout: default
 ---
 
 # The Social Authority SDK

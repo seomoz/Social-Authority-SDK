@@ -1,5 +1,6 @@
 ---
 title: Perl Example Code
+layout: default
 ---
 # Perl Example Code
 

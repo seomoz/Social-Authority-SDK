@@ -1,5 +1,6 @@
 ---
 title: Anatomy of a Social Authority API Call
+layout: default
 ---
 # Anatomy of a Social Authority API Call
 
@@ -25,7 +26,7 @@ For more on how to authenticate your API requests, see [Signed Authentication](h
 These little characters are important, so don’t miss them. The ? separates the main URL from the query parameters, and the ; goes between multiple parameters. You’ll see the ; used in the example for authentication, which is just 3 parameters required by the service.
 All of these elements together give you a valid request:
 
-http://api.followerwonk.com/social-authority?screen_name=randfish;AccessID=NKzHzYz2BI4SXf;Expires=1225138898;Signature=LmXYcPqc%2BkapNKzHzYz2BI4SXfC%3D
+`http://api.followerwonk.com/social-authority?screen_name=randfish;AccessID=NKzHzYz2BI4SXf;Expires=1225138898;Signature=LmXYcPqc%2BkapNKzHzYz2BI4SXfC%3D`
 
 ## Creating Valid Requests in Code
 While you can enter a valid request in your browser for quick queries, if you’re doing a lot of work with the service, you’ll want to create a program that generates the requests for you. To get started, see our [sample code] and applications.
