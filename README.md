@@ -13,7 +13,7 @@ The Social Authority API gives access to a select piece of the Follwerwonk infra
 
 ### A Quick Note about the Response Data Format
 
-By default the Social Authoirty API uses [Hypertext Application Language](http://stateless.co/hal_specification.html) for JSON serialization. This means we can (and do!) embed Hypermedia Controls into the documents. Basically that's a fancy way of saying every response from the API has a key (`_links`) pointing to more information. Generate requests for those URLs to obtain the additional information. This is useful when you exceed the single request limits for scores; the server will automatically generate the URLs needed for subsequent requests to obtain the remaining data.
+By default, the Social Authority API uses [Hypertext Application Language](http://stateless.co/hal_specification.html) for the JSON serialization format. This means we can (and do!) embed Hypermedia Controls into the documents. Every response from the API has a key (`_links`) pointing to more information. Simply generate requests for those URLs to obtain the additional information. This is useful when you exceed the limits for scores returned in a single request. The server will automatically generate the URLs needed for subsequent requests to obtain the remaining data.
 
 ### Setting up Access Controls
 
