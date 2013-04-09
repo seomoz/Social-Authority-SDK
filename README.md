@@ -11,6 +11,10 @@ More than just another self-focused metric, Social Authority helps you discover 
 
 The Social Authority API gives access to a select piece of the Follwerwonk infrastructure. It uses standard HTTP Verbs and Hypermedia documents to make exploring and learning as easy as possible. This guide will use curl for all our examples, you're welcome to translate them into whatever language you prefer.
 
+### A Quick Note about the Response Data Format
+
+By default the Social Authoirty API uses the [Hypertext Application Language](http://stateless.co/hal_specification.html) for it's JSON serialization. This means that we can (and do!) embed what are called Hypermedia Controls into the documents. Basically that's a fancy way of saying that in every response you get from teh API there will be a key (`_links`) pointing to more information you can generate requests for. This comes in useful for when you exceed the limits of scores returned for a single request, the server will automatically generate the URLs for you to make subsequent requests against to get all of the data you would like.
+
 ### Setting up Access Controls
 
 The Followerwonk Social Authority API uses the Mozscape API Access Controls system. You'll need to do to gain access but the first step is to create a Mozscape API account and fetch your AccessID and SecretKey.
