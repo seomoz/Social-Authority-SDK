@@ -23,7 +23,17 @@ You can do this by following the directions at [The Mozscape API keys page](http
 
 Once you have your API keys you will need to add them to Followerwonk's AccessControl registry. This is temporary while we're still in limited beta and hopefully when we launch this integration will be seamless.
 
-To add them to Followerwonk's AccessControl registry simply post them. Here is an example:
+To add them to Followerwonk's AccessControl registry simply POST them using this form:
+
+<form method="POST" action="https://api.followerwonk.com/access-control">
+<fieldset>
+<legend>Add API Tokens to the Social Authority API</legend>
+<label>Access ID</label><input type="text" placeholder="Access ID" />
+<label>Secret Key</label><input type="text" placeholder="Secret Key" />
+</form>
+
+
+Or here is an example using `curl`:
 
     curl -v -XPOST -H'Content-Type: application/json' https://api.followerwonk.com/access-control -d '{ "AccessID":"ACCESS_ID", "SecretKey":"SECRET_KEY"}' 
 
