@@ -17,7 +17,7 @@ By default, the Social Authority API uses [Hypertext Application Language](http:
 
 ### Setting up Access Controls
 
-The Followerwonk Social Authority API uses the Social Authority API Access Controls system. You'll need to do to gain access but the first step is to create a Social Authority API account and fetch your AccessID and SecretKey.
+The Followerwonk Social Authority API uses the an access control system. To gain access the first step is to create a fetch your Social Authority API AccessID and SecretKey.
 
 You can do this by logging into your Followerwonk account and following the directions at [The Social Authority Page](https://followerwonk.com/social-authority).
 
