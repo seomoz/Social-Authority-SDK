@@ -1,4 +1,4 @@
-Social-Authority-SDK
+Social Authority SDK
 ====================
 
 Social Authority helps you find, optimize, and engage your Twitter audience. It's a 1 to 100 point scale that measures a user's influential content on Twitter.
@@ -17,13 +17,13 @@ By default, the Social Authority API uses [Hypertext Application Language](http:
 
 ### Setting up Access Controls
 
-The Followerwonk Social Authority API uses the an access control system. To gain access the first step is to create a fetch your Social Authority API AccessID and SecretKey.
+The Social Authority API uses the an access control system. To gain access the first step is to fetch your Social Authority API AccessID and SecretKey.
 
-You can do this by logging into your Followerwonk account and following the directions at [The Social Authority Page](https://followerwonk.com/social-authority).
+You can do this by logging into Followerwonk and following the directions from [The Social Authority](https://followerwonk.com/social-authority) page there.
 
 ### Querying the Social Authority API
 
-Now that you have an AccessID registered, to query the Social Authority API you will need to make a call to the Social Authority Resource. The Social Authority Resource takes a list of screen names or user ids and returns Social Authority scores for all of the accounts it can find. Currently we limit the number of screen names and user ids in a single request to 100 combined.
+Now that you have an AccessID you can make a call to the Social Authority Resource. The Social Authority Resource takes a list of screen names or user ids and returns Social Authority scores for all of the accounts it can find. Currently we limit the number of screen names and user ids in a single request to 25 combined.
 
 You will need to perform a signed request as described in [Anatomy of a Social Authority Call](https://github.com/seomoz/Social-Authority-SDK/blob/master/docs/Anatomy-of-a-Social-Authority-API-Call.md).
 
