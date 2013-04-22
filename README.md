@@ -9,7 +9,7 @@ More than just another self-focused metric, Social Authority helps you discover 
 
 ## Getting Started with the Social Authority API
 
-The Social Authority API gives access to a select piece of the Follwerwonk infrastructure. It uses standard HTTP Verbs and Hypermedia documents to make exploring and learning as easy as possible. This guide will use curl for all our examples, you're welcome to translate them into whatever language you prefer.
+The Social Authority API gives access to a select piece of the Followerwonk infrastructure. It uses standard HTTP Verbs and Hypermedia documents to make exploring and learning as easy as possible. This guide will use curl for all our examples, you're welcome to translate them into whatever language you prefer.
 
 ### A Quick Note about the Response Data Format
 
@@ -19,7 +19,7 @@ By default, the Social Authority API uses [Hypertext Application Language](http:
 
 The Followerwonk Social Authority API uses the Social Authority API Access Controls system. You'll need to do to gain access but the first step is to create a Social Authority API account and fetch your AccessID and SecretKey.
 
-You can do this by logging into your followerwonk account and following the directions at [The Social Authority Page](https://followerwonk.com/social-authority).
+You can do this by logging into your Followerwonk account and following the directions at [The Social Authority Page](https://followerwonk.com/social-authority).
 
 ### Querying the Social Authority API
 
