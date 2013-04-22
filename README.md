@@ -65,7 +65,7 @@ You'll get back a JSON packet with the Social Authority score and some metrics.
 
 ## Attribution and Licensing
 
-Our Social Authority data is free to use. All we ask is that if you use it publicly, that you include an attribution to http://followerwonk.com/social-authority
+By using the Social Authority API, you agree to our [General Terms of Use](http://www.seomoz.org/users/terms), our [Privacy Policy](http://www.seomoz.org/pages/privacy) and the restrictions contained on this page. You do not have to be a paying member to use our API. Access to the Social Authority API may be suspended or terminated at any time and for any reason, with or without cause. If your access to the API is cancelled, you are not to be entitled to a refund of any kind. SEOmoz may discontinue providing service at any time and for any reason. We simply ask that if you re-use our data you give us attribution and follow our branding guidelines.
 
 ## Help 
 
