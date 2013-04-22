@@ -1,7 +1,3 @@
----
-title: API Response Codes
-layout: default
----
 # API Response Codes
 
 ## 200 OK
