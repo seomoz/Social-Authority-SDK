@@ -25,7 +25,7 @@ Querying the Social Authority API is really quite simple. Here's an expanded exa
 
 	my $time = time + 500;
 	my $signature = hmac_sha1_hex("$id\n$time", $key);
-	my $auth = "AccessID=$id;Expires=$time;Signature=$signature";
+	my $auth = "AccessID=$id;Timestamp=$time;Signature=$signature";
 
 	while ( my $names = join ',', splice @ARGV, 0,99 ) {
 	    say http( 
@@ -64,7 +64,7 @@ Next we set up our authentication credentials:
 
 	my $time = time + 500;
 	my $signature = hmac_sha1_hex("$id\n$time", $key);
-	my $auth = "AccessID=$id;Expires=$time;Signature=$signature";
+	my $auth = "AccessID=$id;Timestamp=$time;Signature=$signature";
 
 Then for batches of 100 names provided on the command line, we make the API request:
 

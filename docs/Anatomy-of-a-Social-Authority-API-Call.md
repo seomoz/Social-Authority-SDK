@@ -22,8 +22,8 @@ These are query parameters that provide your credentials. For example:
 To use signed authentication, append the following three query string parameters:
 
 The AccessID parameter identifies the client in question. The value of this parameter must be your access ID, obtained when you generate yourAPI credentials.
-The Expires parameter is a Unix timestamp that indicates for how long this request is valid. This should be a time in the future, usually no more than several minutes later than the moment your client code initiates the transfer. Values that expire excessively far in the future will not be honored by the Mozscape API. Authentication timestamps must be in UTC in order to work properly.
-The Signature parameter is an HMAC-SHA1 hash of your Access ID (as it appears in the AccessID parameter), followed by a new line, followed by the Expires parameter, using your Secret Key. This hash must be base64 and URL-encoded before being placed in the request query string.
+The Timestamp parameter is a Unix timestamp that indicates for how long this request is valid. This should be a time in the future, usually no more than several minutes later than the moment your client code initiates the transfer. Values that expire excessively far in the future will not be honored by the Mozscape API. Authentication timestamps must be in UTC in order to work properly.
+The Signature parameter is an HMAC-SHA1 hash of your Access ID (as it appears in the AccessID parameter), followed by a new line, followed by the Timestamp parameter, using your Secret Key. This hash must be base64 and URL-encoded before being placed in the request query string.
 Once combined, a valid query string should look like the following:
 
 `AccessID=member-MDczMjM1NGUtN2Y3Ny01OGI0LThkOGUtYzhlYWVlYjcxMTZk;Timestamp=1225138899;Signature=LmXYcPqc%2BkapNKzHzYz2BI4SXfC%3D`
