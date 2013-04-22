@@ -2,7 +2,7 @@ Social Authority SDK
 ====================
 
 Social Authority helps you find, optimize, and engage your Twitter audience. It's a 1 to 100 point scale that measures a user's influential content on Twitter.
-More than just another self-focused metric, Social Authority helps you discover other influential tweeters with high engagement. You can read more about it at [http://followerwonk.com/social-authority]()
+More than just another self-focused metric, Social Authority helps you discover other influential tweeters with high engagement. You can read more about it at [https://followerwonk.com/social-authority](https://followerwonk.com/social-authority)
 
 * [Code Examples](https://github.com/seomoz/Social-Authority-SDK/tree/master/code-examples)
 * [Language Libraries](https://github.com/seomoz/Social-Authority-SDK/tree/master/client-libraries)
