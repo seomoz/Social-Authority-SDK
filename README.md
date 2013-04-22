@@ -2,7 +2,7 @@ Social-Authority-SDK
 ====================
 
 Social Authority helps you find, optimize, and engage your Twitter audience. It's a 1 to 100 point scale that measures a user's influential content on Twitter.
-More than just another self-focused metric, Social Authority helps you discover other influential tweeters with high engagement.
+More than just another self-focused metric, Social Authority helps you discover other influential tweeters with high engagement. You can read more about it at [http://followerwonk.com/social-authority]()
 
 * [Code Examples](https://github.com/seomoz/Social-Authority-SDK/tree/master/code-examples)
 * [Language Libraries](https://github.com/seomoz/Social-Authority-SDK/tree/master/client-libraries)
@@ -17,43 +17,19 @@ By default, the Social Authority API uses [Hypertext Application Language](http:
 
 ### Setting up Access Controls
 
-The Followerwonk Social Authority API uses the Mozscape API Access Controls system. You'll need to do to gain access but the first step is to create a Mozscape API account and fetch your AccessID and SecretKey.
+The Followerwonk Social Authority API uses the Social Authority API Access Controls system. You'll need to do to gain access but the first step is to create a Social Authority API account and fetch your AccessID and SecretKey.
 
-You can do this by following the directions at [The Mozscape API keys page](https://www.seomoz.org/api/keys).
-
-Once you have your API keys you will need to add them to Followerwonk's AccessControl registry. This is temporary while we're still in limited beta and hopefully when we launch this integration will be seamless.
-
-To add them to Followerwonk's AccessControl registry simply post them. Here is an example:
-
-    curl -v -XPOST -H'Content-Type: application/json' https://api.followerwonk.com/access-control -d '{ "AccessID":"ACCESS_ID", "SecretKey":"SECRET_KEY"}' 
-
-A 201 CREATED response will contain a Location header giving the URI of the new AccessControl credentials you just registered. Querying that location will let you check your current access rate limits.
-
-    curl -v https://api.followerwonk.com/access-control/ACCESS_ID
-
-        {
-             "_links" : {
-                "create" : {
-                   "href" : "/token"
-                },
-                "self" : {
-                   "href" : "/access-control/ACCESS_ID"
-                }
-             },
-             "throttle" : "1",
-             "hourly" : "100",
-             "daily" : "800"
-        }
+You can do this by logging into your followerwonk account and following the directions at [The Social Authority Page](https://followerwonk.com/social-authority).
 
 ### Querying the Social Authority API
 
 Now that you have an AccessID registered, to query the Social Authority API you will need to make a call to the Social Authority Resource. The Social Authority Resource takes a list of screen names or user ids and returns Social Authority scores for all of the accounts it can find. Currently we limit the number of screen names and user ids in a single request to 100 combined.
 
-You will need to perform a signed request as described in [The Mozscape API wiki](http://apiwiki.seomoz.org/signed-authentication).
+You will need to perform a signed request as described in [Anatomy of a Social Authority Call](https://github.com/seomoz/Social-Authority-SDK/blob/master/docs/Anatomy-of-a-Social-Authority-API-Call.md).
 
-    curl -v https://api.followerwonk.com/social-authority?screen_name=randfish;AccessID=ACCESS_ID;Expires=TIMESTAMP;Signature=SIGNATURE_HMAC
+    curl -v https://api.followerwonk.com/social-authority?screen_name=randfish;AccessID=ACCESS_ID;Timestamp=TIMESTAMP;Signature=SIGNATURE_HMAC
 
-You'll get back a JSON packet with the the Social Authority score and some metrics.
+You'll get back a JSON packet with the Social Authority score and some metrics.
  
         {
            "_embedded" : [
@@ -87,22 +63,11 @@ You'll get back a JSON packet with the the Social Authority score and some metri
            }
         }
 
-### Klout v1 Compatible API
+## Attribution and Licensing
 
-There is also a Klout v1 Compatible API. You'll need to make requests using an Accept-Content header set to `application/klout+json`. This still requires a signed request as documented at [The Mozscape API wiki](http://apiwiki.seomoz.org/signed-authentication).
+Our Social Authority data is free to use. All we ask is that if you use it publicly, that you include an attribution to http://followerwonk.com/social-authority
 
-    curl -v 'https://api.followerwonk.com/social-authority?screen_name=randfish;AccessID=ACCESS_ID;Expires=TIMESTAMP;Signature=SIGNATURE_HMAC' -H'Accept: application/klout+json'
+## Help 
 
-This will return Klout compatible JSON.
+Problems? Concerns? Questions? [Contact us!](http://www.seomoz.org/help)
 
-        {
-           "status" : 200,
-           "users" : [
-              {
-                 "twitter_screen_name" : "randfish",
-                 "kscore" : "54.90157176971435"
-              }
-           ]
-        }
-
-The Klout Compatible API is provided for easy transition. It is limited in what information it can provide going forward and the native API is recommended for *new* code.
