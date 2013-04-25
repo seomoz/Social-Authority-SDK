@@ -21,6 +21,13 @@ The Social Authority API uses the an access control system. To gain access the f
 
 You can do this by logging into Followerwonk and following the directions from [The Social Authority](https://followerwonk.com/social-authority) page there.
 
+The current request limits are (by default)
+
+        25 IDs per request
+         5 Requests Per Second (ie concurrently)
+      5000 requests per hour
+    20,000 requests per day
+
 ### Querying the Social Authority API
 
 Now that you have an AccessID you can make a call to the Social Authority Resource. The Social Authority Resource takes a list of screen names or user ids and returns Social Authority scores for all of the accounts it can find. Currently we limit the number of screen names and user ids in a single request to 25 combined.
