@@ -17,11 +17,11 @@ By default, the Social Authority API uses [Hypertext Application Language](http:
 
 ### Setting up Access Controls
 
-The Social Authority API uses the an access control system. To gain access the first step is to fetch your Social Authority API AccessID and SecretKey.
+The Social Authority API uses an access control system. To gain access the first step is to fetch your Social Authority API AccessID and SecretKey.
 
-You can do this by logging into Followerwonk and following the directions from [The Social Authority](https://followerwonk.com/social-authority) page there.
+You can do this by logging into Followerwonk and following the directions from the [Social Authority](https://followerwonk.com/social-authority) page there.
 
-The current request limits are (by default)
+The current default request limits are:
 
         25 IDs per request
          5 Requests Per Second (ie concurrently)
@@ -30,7 +30,7 @@ The current request limits are (by default)
 
 ### Querying the Social Authority API
 
-Now that you have an AccessID you can make a call to the Social Authority Resource. The Social Authority Resource takes a list of screen names or user ids and returns Social Authority scores for all of the accounts it can find. Currently we limit the number of screen names and user ids in a single request to 25 combined.
+Once you have an AccessID you can make a call to the Social Authority resource. The Social Authority resource takes a list of screen names or user ids and returns Social Authority scores for all of the accounts it can find. Currently we limit the number of screen names and user ids in a single request to 25 combined.
 
 You will need to perform a signed request as described in [Anatomy of a Social Authority Call](https://github.com/seomoz/Social-Authority-SDK/blob/master/docs/Anatomy-of-a-Social-Authority-API-Call.md).
 
