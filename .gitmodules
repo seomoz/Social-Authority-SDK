@@ -1,3 +1,6 @@
 [submodule "client-libraries/p5-Webservice-Followerwonk-SocialAuthority"]
 	path = client-libraries/p5-Webservice-Followerwonk-SocialAuthority
 	url = git@github.com:seomoz/p5-Webservice-Followerwonk-SocialAuthority.git
+[submodule "client-libraries/KnowEm-php"]
+	path = client-libraries/KnowEm-php
+	url = https://github.com/KnowEm/seomozfollowerwonkapi.git
