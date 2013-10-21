@@ -29,8 +29,8 @@ Social Authority calls:
     <td><a href="#signed-auth">Signed authentication</a> requires your Access ID, Timestamp (a Unix timestamp for a future time at which the request will no longer be valid), and Signature (a securely encoded hash of your Access ID, Secret Key, and Timestamp).<br><br>For example:<br><code>AccessID=member-MDczMjM1NGUtN2Y3Ny01OGI0LThkOGUtYzhlYWVlYjcxMTZk;<br>Timestamp=1225138898;<br>Signature=LmXYcPqc%2BkapNKzHzYz2BI4SXfC%3D</code></td>
   </tr>
   <tr>
-    <td>? and &amp; </td>
-    <td>The question mark <code>?</code> indicates where call parameters begin. An ampersand <code>&</code> separates each parameter.</td>
+    <td>? and &#59; </td>
+    <td>The question mark <code>?</code> indicates where call parameters begin. A semicolon <code>;</code> separates each parameter.</td>
   </tr>
 </tbody>
 </table>

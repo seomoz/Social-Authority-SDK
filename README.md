@@ -8,7 +8,7 @@ More than just another self-focused metric, Social Authority helps you discover 
 * [Code samples](https://github.com/seomoz/Social-Authority-SDK/tree/master/code-examples) can help you get started with the Social Authority API.
 * [Client libraries](https://github.com/seomoz/Social-Authority-SDK/tree/master/client-libraries) can help you develop your own applications.
 
-This guide uses `curl` for examples; you're welcome to use whatever language you prefer.
+This guide uses `curl` for examples; you're welcome to use the tools and languages of your choice.
 
 The Social Authority API uses [standard HTTP methods](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html) and hypermedia documents to make exploring and learning as easy as possible.
 
@@ -32,9 +32,9 @@ When you exceed the limits for scores returned in a single request, the server a
 
 ### Querying the Social Authority API
 
-[Anatomy of a Social Authority Call](https://github.com/seomoz/Social-Authority-SDK/blob/master/docs/Anatomy-of-a-Social-Authority-API-Call.md) describes how to make Social Authority API requests.
+[Anatomy of a Social Authority Call](/docs/Anatomy-of-a-Social-Authority-API-Call.md) describes how to make Social Authority API requests.
 
-Here is an example of a 
+Here is an example of an API request:
 
     curl -v https://api.followerwonk.com/social-authority?screen_name=randfish;AccessID=member-MDczMjM1NGUtN2Y3Ny01OGI0LThkOGUtYzhlYWVlYjcxMTZk;Timestamp=1225138898;Signature=LmXYcPqc%2BkapNKzHzYz2BI4SXfC%3D
 
