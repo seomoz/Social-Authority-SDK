@@ -1,42 +1,44 @@
-Social Authority SDK
+Social Authority API
 ====================
 
 Social Authority helps you find, optimize, and engage your Twitter audience. It's a 1 to 100 point scale that measures a user's influential content on Twitter.
-More than just another self-focused metric, Social Authority helps you discover other influential tweeters with high engagement. You can read more about it at [https://followerwonk.com/social-authority](https://followerwonk.com/social-authority)
 
-* [Code Examples](https://github.com/seomoz/Social-Authority-SDK/tree/master/code-examples)
-* [Language Libraries](https://github.com/seomoz/Social-Authority-SDK/tree/master/client-libraries)
+More than just another self-focused metric, Social Authority helps you discover other influential tweeters with high engagement. Read more about it on the [Moz Social Authority site](https://followerwonk.com/social-authority).
+
+* [Code samples](https://github.com/seomoz/Social-Authority-SDK/tree/master/code-examples) can help you get started with the Social Authority API.
+* [Client libraries](https://github.com/seomoz/Social-Authority-SDK/tree/master/client-libraries) can help you develop your own applications.
+
+This guide uses `curl` for examples; you're welcome to use whatever language you prefer.
+
+The Social Authority API uses [standard HTTP methods](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html) and hypermedia documents to make exploring and learning as easy as possible.
 
 ## Getting Started with the Social Authority API
 
-The Social Authority API gives access to a select piece of the Followerwonk infrastructure. It uses standard HTTP Verbs and Hypermedia documents to make exploring and learning as easy as possible. This guide will use curl for all our examples, you're welcome to translate them into whatever language you prefer.
+### Get Your Access Credentials
+
+To access the Social Authority API:
+
+1. Log into your Twitter account.
+2. Log into Followerwonk.
+3. Go to the [Social Authority](https://followerwonk.com/social-authority) page and click on "get access credentials".
+
+Follow the instructions on the web page to receive an Access ID and a Secret Key.
 
 ### A Quick Note about the Response Data Format
 
-By default, the Social Authority API uses [Hypertext Application Language](http://stateless.co/hal_specification.html) for the JSON serialization format. This means we can (and do!) embed Hypermedia Controls into the documents. Every response from the API has a key (`_links`) pointing to more information. Simply generate requests for those URLs to obtain the additional information. This is useful when you exceed the limits for scores returned in a single request. The server will automatically generate the URLs needed for subsequent requests to obtain the remaining data.
+The Social Authority API uses [Hypertext Application Language](http://stateless.co/hal_specification.html) for its JSON serialization format. This means we can (and do!) embed Hypermedia Controls in documents the Social Authority API returns. 
 
-### Setting up Access Controls
-
-The Social Authority API uses an access control system. To gain access the first step is to fetch your Social Authority API AccessID and SecretKey.
-
-You can do this by logging into Followerwonk and following the directions from the [Social Authority](https://followerwonk.com/social-authority) page there.
-
-The current default request limits are:
-
-        25 IDs per request
-         5 Requests Per Second (ie concurrently)
-      5000 requests per hour
-    20,000 requests per day
+When you exceed the limits for scores returned in a single request, the server automatically generates URLs (`_links`) for subsequent requests to obtain the remaining data.
 
 ### Querying the Social Authority API
 
-Once you have an AccessID you can make a call to the Social Authority resource. The Social Authority resource takes a list of screen names or user ids and returns Social Authority scores for all of the accounts it can find. Currently we limit the number of screen names and user ids in a single request to 25 combined.
+[Anatomy of a Social Authority Call](https://github.com/seomoz/Social-Authority-SDK/blob/master/docs/Anatomy-of-a-Social-Authority-API-Call.md) describes how to make Social Authority API requests.
 
-You will need to perform a signed request as described in [Anatomy of a Social Authority Call](https://github.com/seomoz/Social-Authority-SDK/blob/master/docs/Anatomy-of-a-Social-Authority-API-Call.md).
+Here is an example of a 
 
-    curl -v https://api.followerwonk.com/social-authority?screen_name=randfish;AccessID=ACCESS_ID;Timestamp=TIMESTAMP;Signature=SIGNATURE_HMAC
+    curl -v https://api.followerwonk.com/social-authority?screen_name=randfish;AccessID=member-MDczMjM1NGUtN2Y3Ny01OGI0LThkOGUtYzhlYWVlYjcxMTZk;Timestamp=1225138898;Signature=LmXYcPqc%2BkapNKzHzYz2BI4SXfC%3D
 
-You'll get back a JSON packet with the Social Authority score and some metrics.
+The Social Authority API returns Social Authority scores and metrics in a JSON-formatted packet. For example:
  
         {
            "_embedded" : [
@@ -70,11 +72,22 @@ You'll get back a JSON packet with the Social Authority score and some metrics.
            }
         }
 
+### Request Limits
+
+The default request limits are:
+
+        25 IDs per request
+         5 Requests Per Second (ie concurrently)
+      5000 requests per hour
+    20,000 requests per day
+
+The Social Authority API counts both screen names and user IDs toward the limit of 25 IDs per request.
+
 ## Attribution and Licensing
 
-By using the Social Authority API, you agree to our [General Terms of Use](http://www.seomoz.org/users/terms), our [Privacy Policy](http://www.seomoz.org/pages/privacy) and the restrictions contained on this page. You do not have to be a paying member to use our API. Access to the Social Authority API may be suspended or terminated at any time and for any reason, with or without cause. If your access to the API is cancelled, you are not to be entitled to a refund of any kind. SEOmoz may discontinue providing service at any time and for any reason. We simply ask that if you re-use our data you give us attribution and follow our branding guidelines.
+By using the Social Authority API, you agree to our [Terms of Use and Privacy Policy](http://moz.com/terms-privacy) as well as the restrictions contained on this page. You do not have to be a paying PRO member to use the Social Authority API. Access to the Social Authority API may be suspended or terminated at any time and for any reason, with or without cause. If your access is cancelled, you are not entitled to a refund of any kind. Moz may discontinue providing service at any time and for any reason. Data must follow all attribution and branding requirements.
 
 ## Help 
 
-Problems? Concerns? Questions? [Contact us!](http://www.seomoz.org/help)
+Problems? Concerns? Questions? Join the [Moz Support Forums](https://seomoz.zendesk.com/categories/6328-SEOmoz-APIs-and-Extras)! You can ask questions and get answers, interact with the support team and other API users, and request features for future releases.
 

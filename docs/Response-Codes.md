@@ -2,28 +2,28 @@
 
 ## 200 OK
 
-Your request has completed successfully. The Request body will contain the data you were looking for.
+Your request completed successfully. The Request body contains the data you searched for.
 
 ## 201 CREATED
 
-Creating the resource was successful. There will be a Location header pointing to the newly created Resource.
+The resource was successfully created. A Location header points to the newly created Resource.
 
 ## 401 AUTHORIZATION REQUIRED
 
-You need to supply authentication credentials. See the [[Anatomy of a Social Authority API Call]] for more information on how to make a valid request.
+Supply authentication credentials. See the [Anatomy of a Social Authority API Call](/Anatomy-of-a-Social-Authority-API-Call) for more information on how to make a valid request.
 
 ## 403 FORBIDDEN
 
-The authentication credentials you supplied weren't valid. You'll need to check that you are using the right credentials and supply the appropriate ones. 
+The authentication credentials you supplied are invalid. Check that you are using the right credentials and try again.
 
 ## 404 NOT FOUND
 
-The server couldn't find the data you were looking for. Possibly it was removed (either by twitter, or by another request).
+The server cannot find the data you were looking for. It may have been removed, either by Twitter or by another request.
 
 ## 420 CALM DOWN
 
-You're requests are coming in too quickly and have triggered throttle controls. Please slow down your requests to under the throttle limits.
+You have made too many requests and triggered throttle controls. Please slow down your requests to fall within throttle limits.
 
 ## 429 LIMITS EXCEEDED
 
-You've made too many requests for the current time period (hour or day). Please wait until your throttle limits have reset (when the current period ends) and try again.
+You have made too many requests for the current time period (hour or day). Please wait until the current period ends and your throttle limits reset.

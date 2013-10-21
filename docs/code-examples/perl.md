@@ -1,10 +1,6 @@
----
-title: Perl Example Code
-layout: default
----
 # Perl Example Code
 
-Querying the Social Authority API is really quite simple. Here's an expanded example using the `HTTP::Thin::UserAgent` client from CPAN.
+This example uses the `HTTP::Thin::UserAgent` client from CPAN.
 
 	#!/usr/bin/env perl
 	use 5.12.1;
@@ -34,31 +30,34 @@ Querying the Social Authority API is really quite simple. Here's an expanded exa
 	    )->as_json->response->dump;
 	}
 
-Let's step through this a little bit. First we start off with a standard modern Perl preamble:
+Begin with a standard Perl preamble:
 
 	#!/usr/bin/env perl
 	use 5.12.1;
 	use warnings;
 
-We're stating that we'd like to use Perl 5.12.1. This version of Perl is the first to start with better defaults for helping us catch typos and other errors. If you're using a version before 5.12.1, we recommend replacing this line with:
+The preamble states that we'd like to use Perl 5.12.1, the first version to start with better defaults for catching typos and other errors. If you're using a version prior to 5.12.1, we recommend replacing:
+
+	use 5.12.1;
+
+with:
 
 	use strict;
 	use feature qw(say);
 
-Next we bring in the external libraries we would like to use. There are three:
+Next we import three external libraries:
 
 	use HTTP::Thin::UserAgent;
 	use Getopt::Long; 
 	use Digest::HMAC_SHA1 qw(hmac_sha1_hex);
  
-
-[`HTTP::Thin::UserAgent`][1] is a small HTTP client that makes doing API style requests easier. [`Getopt::Long`][2] is a standard command line argument parser, and it ships with the core Perl distribution. Finally [`Digest::HMAC_SHA1`][3] is what we'll use to sign our requests.
+[`HTTP::Thin::UserAgent`][1] is a small HTTP client that makes API-style requests easier. [`Getopt::Long`][2] is a standard command line argument parser that ships with the core Perl distribution. Finally, [`Digest::HMAC_SHA1`][3] is for signing requests.
 
 Continuing on:
 
 	die "Must supply --id and --key" unless $id && $key;
  
-If we don't have the information we need to sign the requests we throw an exception telling the user that they need to supply the required arguments.
+If the information needed to sign requests isn't included, we throw an exception telling the user to supply the required arguments.
 
 Next we set up our authentication credentials:
 
@@ -75,7 +74,7 @@ Then for batches of 100 names provided on the command line, we make the API requ
 	    )->as_json->response->dump;
 	}
 
-And that's basically all there is to it.
+That's all there is to it!
 
 [1]: http://metacpan.org/module/HTTP::Thin::UserAgent
 [2]: http://metacpan.org/module/Getopt::Long
