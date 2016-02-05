@@ -25,8 +25,8 @@ The current default request limits are:
 
         25 IDs per request
          5 Requests Per Second (ie concurrently)
-      100 requests per hour
-      100 requests per day
+        10 requests per hour
+        10 requests per day
 
 ### Querying the Social Authority API
 
