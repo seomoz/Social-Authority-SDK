@@ -21,12 +21,14 @@ The Social Authority API uses an access control system. To gain access the first
 
 You can do this by logging into Followerwonk and following the directions from the [Social Authority](https://followerwonk.com/social-authority) page there.
 
-The current default request limits are:
+The current default freemium request limits are 250 SAs per day & 7500 SAs per month:
 
         25 IDs per request
          5 Requests Per Second (ie concurrently)
         10 requests per hour
         10 requests per day
+
+Please contact us (help@moz.com) for paid subscription access for larger volumes.
 
 ### Querying the Social Authority API
 
