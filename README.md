@@ -1,6 +1,8 @@
 Social Authority SDK
 ====================
 
+Followerwonk moved. The canonical version of this project is at [followerwonk/Social-Authority-SDK](https://github.com/followerwonk/Social-Authority-SDK).
+
 Social Authority helps you find, optimize, and engage your Twitter audience. It's a 1 to 100 point scale that measures a user's influential content on Twitter.
 More than just another self-focused metric, Social Authority helps you discover other influential tweeters with high engagement. You can read more about it at [https://followerwonk.com/social-authority](https://followerwonk.com/social-authority)
 
@@ -39,7 +41,7 @@ You will need to perform a signed request as described in [Anatomy of a Social A
     curl -v https://api.followerwonk.com/social-authority?screen_name=randfish;AccessID=ACCESS_ID;Timestamp=TIMESTAMP;Signature=SIGNATURE_HMAC
 
 You'll get back a JSON packet with the Social Authority score and some metrics.
- 
+
         {
            "_embedded" : [
               {
@@ -76,7 +78,7 @@ You'll get back a JSON packet with the Social Authority score and some metrics.
 
 By using the Social Authority API, you agree to our [General Terms of Use](http://www.seomoz.org/users/terms), our [Privacy Policy](http://www.seomoz.org/pages/privacy) and the restrictions contained on this page. You do not have to be a paying member to use our API. Access to the Social Authority API may be suspended or terminated at any time and for any reason, with or without cause. If your access to the API is cancelled, you are not to be entitled to a refund of any kind. SEOmoz may discontinue providing service at any time and for any reason. We simply ask that if you re-use our data you give us attribution and follow our branding guidelines.
 
-## Help 
+## Help
 
 Problems? Concerns? Questions? [Contact us!](http://www.seomoz.org/help)
 
